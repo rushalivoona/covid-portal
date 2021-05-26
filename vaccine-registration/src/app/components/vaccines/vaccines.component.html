@@ -1,0 +1,194 @@
+<div class="row vaccineData">
+    <div class="col-4"><img class="vaccine" src="./assets/vaccines/vaccines.jpg" alt="vaccine" /></div>
+    <div class="col-8">
+        <div>
+            <p>Vaccination is a simple, safe, and effective way of protecting people against harmful diseases, before they come into contact with them.
+                Experiencing side effects after getting vaccinated means the vaccine is working and your immune system is responding as it should. Vaccines are safe,
+                 and getting vaccinated will help protect you against COVID-19.
+            </p>
+            <h5 style="text-align: center;">Know Your Vaccines..</h5>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-5" title="click here to know more about COVISHIELD" (click)="navigateTo('covishield')">COVISHIELD</div>
+                <div class="col-5" title="click here to know more about COVAXIN" (click)="navigateTo('covaxin')">COVAXIN</div>
+                <div class="col-1"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <google-chart [type]='chart.PieChart' [options]='chart.options' style="width: 100%;" [height]='chart.height' [data]='dataTable'></google-chart>        
+  </div>
+<hr>
+<div id="covishield">
+    <div style="padding: 10px;"><img src="./assets/vaccines/covishield.jpg" style="width: 1200px; margin-left: 41px;" /></div>
+    <p style="color: rgb(12, 77, 162); font-weight: 500;">The Oxford-AstraZeneca COVID-19 vaccine — also known as Vaxzevria, as of March 25, 2021 — is a two-dose vaccine jointly developed by the Oxford Vaccine Group and pharmaceutical company AstraZeneca to target the SARS-CoV-2 virus.
+    <br> Institute of India’s COVID-19 vaccine, called Covishield, is a version of the Oxford-AstraZeneca vaccine that manufacturers in India produce locally.
+    The Covishield vaccination course consists of two separate doses of 0.5 ml each. The second dose should be administered between four to six weeks after the first dose. 
+    <br>According to AstraZeneca’s primary analysis of phase 3 trial data, the vaccine has a 76% efficacy rate after both doses.</p>
+    <br>
+    <div class="faq-block">
+        <div style="position: relative; float: left; top: -81px; left: -19px;"><img src="./assets/vaccines/questions.png" width="200px" height="200px"/>       </div>
+        <div style="position: relative; float: right;">
+            <h6 style="text-align: center;font-size: 2rem;">Get Your Queries related to vaccine answered here!</h6>
+            <button class="btn btn-warning" (click)="showCovishieldFAQs()" style="color: rgb(12, 75, 160);">See All the FAQs <span><img src="./assets/vaccines/btn-arrow.png" width="15px" height="15px" /></span></button>
+        </div>
+    </div>         
+    <div *ngIf="covishieldFAQs" style="background-color: rgb(12, 75, 160); padding: 10px;">
+        <div class="QnA"><span class="questions">What is the Covishield vaccine?</span><br>
+            The Covishield is approved for restricted use in emergency situation vaccine that may prevent Covid-19 disease in individuals 18 years of age and older.
+            <br><br>
+        </div>
+        <div class="QnA"><span class="questions">What should you mention to your healthcare provider before you get Covishield vaccine?</span><br>
+        Tell the healthcare provider about all of your medical conditions, including:<br>
+        <ul>
+            <li>If you have ever had a severe allergic reaction (anaphylaxis) after any drug, food, any vaccine or any ingredients of COVISHIELD™ vaccine</li>
+            <li>If you have a fever</li>
+            <li>If you have a bleeding disorder or are on a blood thinner</li>
+            <li>If you are immunocompromised or are on a medicine that affects your immune system</li>
+            <li>If you are pregnant or plan to become pregnant</li>
+            <li>If you are breastfeeding</li>
+            <li>If you have received another Covid-19 vaccine, you should consult your healthcare provider before deciding to take the vaccine.</li>
+        </ul>
+        <br><br></div>
+        <div class="QnA">
+        <span class="questions">should get the Covishield vaccine?</span> <br>
+        Covishield vaccine has been approved for restricted use in emergency situation in individuals 18 years of age and older.
+        <br><br>
+        <span class="questions">should not get the Covishield vaccine?</span><br> 
+        You should not get the Covishield vaccine if you:<br>
+        <ul>
+            <li>Had a severe allergic reaction after a previous dose of this vaccine</li>
+            <li>Had a severe allergic reaction to any ingredient of this vaccine.</li>
+        </ul>      
+        <br><br></div>
+        <div class="QnA">
+        <span class="questions">What are the ingredients in the Covishield vaccine?</span><br>
+        The Covishield vaccine includes the following ingredients:<br>    
+        L-Histidine, L-Histidine hydrochloride monohydrate, Magnesium chloride hexahydrate, Polysorbate 80, Ethanol, Sucrose, Sodium chloride, Disodium edetate dihydrate (EDTA), Water for injection.
+        <br>If you receive one dose of the Covishield vaccine, then the second dose should be administered between 4 to 6 weeks after the first dose. However, there is data available for administration of the second dose up to 12 weeks after the first dose from the overseas studies.
+        if you miss your second dose.<br>
+        If you forget to go back at the scheduled time, ask your healthcare provider for advice. It is important that you return for your second dose of Covishield vaccine.
+        <br><br><span class="questions">What are the risks of the Covishield vaccine?</span><br>
+        Side effects that have been reported with the Covishield vaccine include:<br>
+        <ul>
+            <li>
+                Very Common (may affect more than 1 in 10 people)
+                <ul>
+                    <li>Tenderness, pain, warmth, redness, itching, swelling, or bruising where the injection is given</li>
+                    <li>Generally feeling unwell</li>
+                    <li>Feeling tired (fatigue)</li>
+                    <li>Chills or feeling feverish</li>
+                    <li>Headache</li>
+                    <li>Feeling sick (nausea)</li>
+                    <li>Joint pain or muscle ache</li>
+                </ul>                  
+            </li>
+            <li>
+                Common (may affect up to 1 in 10 people)
+                <ul>
+                    <li>A lump at the injection site</li>
+                    <li>Fever</li>
+                    <li>Being sick (vomiting)</li>
+                    <li>Flu-like symptoms, such as high temperature, sore throat, runny nose, cough and chills</li>
+                </ul>                
+            </li>
+            <li>
+                Uncommon (may affect up to 1 in 100 people)
+                <ul>
+                    <li>Feeling dizzy</li>
+                    <li>Decreased appetite</li>
+                    <li>Abdominal pain</li>
+                    <li>Enlarged lymph nodes</li>
+                    <li>Excessive sweating, itchy skin or rash</li>
+                </ul>        
+            </li>
+        </ul>
+        <br><br></div>
+        <div class="QnA">
+        <span class="questions">What should I do about side effects?</span><br>
+        If you experience a severe allergic reaction, call or go to the nearest hospital. Call the healthcare provider if you have any side effects that bother you or do not go away. 
+        In addition, you can report side effects after vaccination to Serum Institute of India Pvt Ltd who is the manufacturer of Covishield vaccine as below.
+    
+        <br>* 24 x 7 Call Center Toll-Free Number (For Medical and Adverse Event-Related Queries Only):
+        +91-1800 1200124
+        <br>* pharmacovigilance@seruminstitute.com
+        <br><br></div>
+        <div class="QnA">
+        <span class="questions">Will The Covishield vaccine give me Covid-19 infection?</span><br>
+        No. The Covishield Covid-19 vaccine does not contain SARS-CoV-2 and cannot give you Covid-19 infection.
+        <br></div>
+    </div>
+    
+<div class="reg-link" style="text-align: right;"><a (click)="goTo('covishield')">Get your COVISHIELD vaccine now <span><img src="./assets/vaccines/arrows.png" style="width: 20px; height: 20px;"/></span></a></div>
+</div>
+
+<div id="covaxin" style="margin-top: 15px;">
+    <div class="row" style="padding: 40px; text-align: center;">
+        <div class="col-6"><img src="./assets/vaccines/covaxin1.jpg" width="400px" height="300px" /></div>
+        <div class="col-6"><img src="./assets/vaccines/covaxin2.jpg" width="400px" height="300px" /></div>
+    </div>
+    <p style="color: rgb(12, 77, 162); font-weight: 500;">
+        Bharat Biotech’s Covaxin (BBV152) is an inactivated COVID-19 vaccine that uses adjuvant Alhydroxiquim-II to boost immune response longer-lasting immunity. The Indian Council of Medical Research created the Covaxin (BBV152) vaccine.
+         Inactivated vaccines do not replicate and are therefore unlikely to revert and cause pathological effects.
+        <br>
+        In addition to generating a strong immune response against multiple antigens, COVAXIN has been shown to generate memory T cell responses for its multiple epitopes,
+         indicating longevity and rapid antibody response to future infections.
+        
+    </p>
+    <div class="faq-block">
+        <div style="position: relative; float: left; top: -81px; left: -19px;"><img src="./assets/vaccines/questions.png" width="200px" height="200px"/>       </div>
+        <div style="position: relative; float: right;">
+            <h6 style="text-align: center;font-size: 2rem;">Get Your Queries related to vaccine answered here!</h6>
+            <button class="btn btn-warning" (click)="showCovaxinFAQs()" style="color: rgb(12, 75, 160);">See All the FAQs <span><img src="./assets/vaccines/btn-arrow.png" width="15px" height="15px" /></span></button>
+        </div>
+    </div>         
+    <div *ngIf="covaxinFAQs" style="background-color: rgb(12, 75, 160); padding: 10px;">
+        <div class="QnA"><span class="questions">Who can/cannot take Bharat Biotech Covaxin vaccine?</span><br>
+            Bharat Bitoch said it was not advisable to take Covaxin in any of the following conditions:
+            <ul>
+                <li>Have any allergies</li>
+                <li>Have fever</li>
+                <li>Have a bleeding disorder or are on a blood thinner</li>
+                <li>Are immunocompromised or are on a medicine that affects your immune system</li>
+                <li>Are pregnant</li>
+                <li>Are breastfeeding</li>
+                <li>Have received another Covid-19 vaccine</li>
+                <li>Any other serious health related issues, as determined by the vaccinator</li>
+            </ul>       
+            <br><br>
+        </div>  
+        <div class="QnA"><span class="questions">What are side effects of Bharat Biotech Covaxin vaccine?</span><br>
+            The side effects that have been reported with the Bharat Biotech’s Covaxin vaccine include:<br>
+            * Injection site pain<br>
+            * Injection site swelling<br>
+            * Injection site redness<br>
+            * Injection site itching<br>
+            * Stiffness in the upper arm<br>
+            * Weakness in injection arm<br>
+            * Body ache<br>
+            * Headache<br>
+            * Fever<br>
+            * Malaise<br>
+            * Weakness<br>
+            * Rashes<br>
+            * Nausea<br>
+            * Vomiting<br><br>
+
+            Covaxin can also cause a severe allergic reaction, although rare. Signs of this include:
+            <br>
+            * Difficulty in breathing<br>
+            * Swelling of your face and throat<br>
+            * A fast hear beat<br>
+            * Rash all over your body<br>
+            * Dizziness and weakness<br>
+            <br><br>
+        </div>  
+                  
+    </div>        
+    <div class="reg-link" style="text-align: right;"><a (click)="goTo('covaxin')">Get your COVAXIN vaccine now <span><img src="./assets/vaccines/arrows.png" style="width: 20px; height: 20px;"/></span></a></div>
+</div>
+    
+
+

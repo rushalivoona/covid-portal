@@ -1,0 +1,90 @@
+<div class="container">
+    <div class="carousel">
+        <ngb-carousel>
+            <ng-template ngbSlide>
+              <div class="wrapper">
+                <img src="./assets/carousel/img1.jpg" alt="Random first slide">
+              </div>
+            </ng-template>
+            <ng-template ngbSlide>
+              <div class="wrapper">
+                <img src="./assets/carousel/img2.jpg" alt="Random second slide">
+              </div>
+            </ng-template>
+            <ng-template ngbSlide>
+              <div class="wrapper">
+                <img src="./assets/carousel/img3.jpg"  alt="Random third slide">
+              </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="wrapper">
+                  <img src="./assets/carousel/img4.png"  alt="Random third slide">
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="wrapper">
+                  <img src="./assets/carousel/img5.jpg"  alt="Random third slide">
+                </div>
+            </ng-template> 
+          </ngb-carousel>
+    </div>
+
+    <div class="row">
+      <div class="card col p-3 m-3">
+        <div class="card-title">Total First Doses</div>
+        <div class="card-body">{{totalFirstDose | number}}</div>
+    </div>
+    <div class="card col p-3 m-3">
+        <div class="card-title">Total Second Doses</div>
+        <div class="card-body">{{totalSecondDose | number}}</div>
+    </div>
+    <div class="card col p-3 m-3">
+        <div class="card-title">Total Covaxin Doses</div>
+        <div class="card-body">{{totalCovaxinDoses | number}}</div>
+    </div>
+    <div class="card col p-3 m-3">
+        <div class="card-title">Total Covishield Doses</div>
+        <div class="card-body">{{totalCovishieldDoses | number}}</div>
+    </div>
+    </div>
+
+    <div class="row">
+      <google-chart [type]='chart.PieChart' [options]='chart.options' style="width: 100%;" [height]='chart.height' [data]='dataTable'></google-chart>        
+    </div>
+
+    <div class="row faq-block">
+      <div style="position: relative; float: left; top: -81px; left: -40px;"><img src="./assets/vaccines/questions.png" width="200px" height="200px"/>       </div>
+      <div style="position: relative; float: right;top: -209px;
+      right: -63px;">
+          <h6 style="text-align: center;font-size: 2rem;">Get Your Queries related to vaccine answered here!</h6>
+          <button class="btn btn-warning" (click)="showFAQs()" style="color: rgb(12, 75, 160);">See All the FAQs <span><img src="./assets/vaccines/btn-arrow.png" width="15px" height="15px" /></span></button>
+      </div>
+  </div>         
+  <div *ngIf="FAQs" style="background-color: rgb(12, 75, 160); padding: 10px;">
+      <div class="QnA"><span class="questions">Why do we need a second dosage and could you explain how it works?</span><br>
+        The first dosage primes the body with an initial immune response. Two-three weeks after the first dosage, the body develops immunity against Covid-19, however, this immunity reduces after eight weeks. The second dosage boosts the period of immunity. Many vaccines, including the ones used against Polio and Hepatitis-B, require multiple dosages for them to be effective.
+        <br><br>
+      </div>  
+      <div class="QnA"><span class="questions">How long will immunity against Covid-19 last after the second dose?</span><br>
+        We do not have sufficient research to answer this. However, Covid-19 is an RNA-virus; and these viruses mutate very quickly. So it is reasonable to assume that the vaccine may not help fight against new variants that might spread a few months from now. We need to see this like the flu-vaccine which people get every year. Covid-19 mutates frequently like the Influenza virus. We do not need to keep getting the Polio or measles vaccine every year because the viruses that cause them mutate slowly.
+          <br><br>
+      </div>  
+      <div class="QnA"><span class="questions">The government has extended the time between taking two Covishield doses. Why is this?</span><br>
+        From a public health stand-point, by extending the gap between the two shots, the available vaccines will be accessible to a larger population, especially to those on the priority list. This will give time to manufacture more vaccines. Further, we have scientific data that shows that the efficacy of the vaccine is significantly higher when the second dosage is administered between 6-8 weeks. Two weeks after the second dose, efficacy of the vaccine peaks to almost 80 per cent. Some studies have shown that efficacy may improve slightly more if the vaccines are administered 12 weeks apart, but we do not have sufficient data to recommend this. Ideally, people should get their second shot by the end of eight weeks.   
+          <br><br>
+      </div>  
+      <div class="QnA"><span class="questions">Should we delay taking the second dose of Covaxin too?</span><br>
+        No. Second dose of Covaxin should be taken at a four-week interval. We have scientific studies to back it only for this time period. The extension applies only for Covishield.  
+          <br><br>
+      </div>  
+      <div class="QnA"><span class="questions">Should people be concerned about getting stronger symptoms after the second dose?</span><br>
+        Many people, who were strongly affected by side effects during the first dose, had very little side effects after the second one. However, this is subject to the nature of the body. There is no fixed pattern on how the body will react and there is not enough research on this.
+        <br><br>
+      </div>  
+      <div class="QnA"><span class="questions">Many people wonder if that would be the time to give up masks and social distancing.</span><br>
+        Absolutely not. The vaccine at best has about 80 per cent efficacy; this means that 2 out of every 10 immunised persons still stand a chance of getting infected with Covid-19. So it is important to wear a mask and continue other safety measures. However, people can worry less about dying from or falling critically ill from Covid-19 after getting both the dosages.      
+        <br><br>
+      </div>  
+                
+  </div> 
+</div>

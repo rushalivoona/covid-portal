@@ -1,0 +1,27 @@
+.col-5{
+    color: crimson;
+    font-weight: 600;
+    text-align: center;
+}
+
+.vaccine{
+    height: 200px;
+    width: 350px;
+}
+
+.vaccineData{
+    padding: 10px;
+}
+
+p{
+    padding: 10px;
+    margin-left: 50px;
+    margin-right: 34px;
+}
+
+.reg-link{
+    color: rgb(56,117,198);
+    font-weight: 500;
+    margin-right: 1rem;
+}
+

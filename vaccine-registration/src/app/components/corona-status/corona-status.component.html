@@ -1,0 +1,51 @@
+<div class="jumbotron bg-white">
+    <h4>
+        Covid-19 Tracker
+    </h4>
+<hr>
+<div class="row">
+    <google-chart [type]='chart.LineChart' [options]='chart.options' style="width: 100%;" [height]='chart.height' [data]='lineData'></google-chart>        
+</div>
+<div class="form-group col-lg-5">
+    <label for = "input">Select:</label>
+    <select id="place" class="form-control" #input (change)="getData(input.value)">
+        <option value={{place}} *ngFor='let place of places'>{{place}}</option>
+    </select>
+</div>
+<app-dashboard [totalConfirmed]='totalConfirmed' [totalRecovered]='totalRecovered' [totalActive]='totalActive' [totalDeaths]='totalDeaths'></app-dashboard>
+
+</div>
+<div class="row" style="margin-left: 2rem;">
+    Select 'cases' type: &nbsp;&nbsp;
+    <div class="form-check-inline">
+        <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="casetype" #c (click)="setCharts(c.value)" value="c" checked>Confirmed
+        </label>
+    </div>
+    <div class="form-check-inline">
+        <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="casetype" #r (click)="setCharts(r.value)" value="r">Recovered
+        </label>
+    </div>
+    <div class="form-check-inline">
+        <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="casetype" #d (click)="setCharts(d.value)" value="d">Deaths
+        </label>
+    </div>
+    <div class="form-check-inline">
+        <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="casetype" #a (click)="setCharts(a.value)" value="a">Active
+        </label>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <google-chart [type]='chart.PieChart' [options]='chart.options' style="width: 100%;" [height]='chart.height' [data]='datatable'></google-chart>        
+    </div>
+    <div class="col">
+        <google-chart [type]='chart.ColumnChart' style="width: 100%;" [options]='chart.options' [height]='chart.height' [data]='datatable'></google-chart>
+    </div>
+</div>
+
+
+
